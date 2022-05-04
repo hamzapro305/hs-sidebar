@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+// Breakpoints Structure
+$custom-breakpoints: (
+    xs: (minSize: 0px, maxSize: 575px, maxContWidth: 0px, name: 'XS'), // vertical mobile layout
+    sm: (minSize: 576px, maxSize: 767px, maxContWidth: 719px, name: 'SM'), //horizontal mobile layout
+    md: (minSize: 768px, maxSize: 991px, maxContWidth: 720px, name: 'MD'), //ipad
+    lg: (minSize: 992px, maxSize: 1249px, maxContWidth: 960px, name: 'LG'), //ipad pro
+    xl: (minSize: 1250px, maxSize: 1499px, maxContWidth: 1250px, name: 'XL'),
+    max: (minSize: 1500px, maxSize: 0px, maxContWidth: 1201px, name: 'MAX')
+);
+@mixin responsive($breakpoint) { 
+    @if map-has-key($custom-breakpoints, $breakpoint) {
+        @media (max-width: #{map-get(map-get($custom-breakpoints, $breakpoint), maxSize)}) {
+          @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint #{$breakpoint} does not exist. Check case sensitivity.";
+    }
+}
+
+$MaxWidth: 1200px;
+$MF: 'Poppins', sans-serif;

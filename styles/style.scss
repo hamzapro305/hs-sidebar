@@ -1,0 +1,34 @@
+@import "vars";
+
+@import "comp/sidebar.scss";
+
+
+.Main-page{
+    display: flex;
+}
+.content-page{
+    padding: 10px;
+    width: 100%;
+    overflow-x: auto;
+    h1{
+        font-size: 25px;
+        font-weight: bolder;
+        white-space: normal;
+    }
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+body{
+    font-family: $MF;
+}

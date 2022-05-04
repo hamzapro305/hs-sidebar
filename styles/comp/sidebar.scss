@@ -1,0 +1,78 @@
+.side-bar-main{
+    .sidebar{
+        background-color: #288ba8;
+        height: 100vh;
+        .side-head{
+            padding: 10px 10px 0px 10px;
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .Logo{
+                    font-size: 18px;    
+                    color: white;
+                    white-space: nowrap;
+                    @include responsive(sm){
+                        font-size: 12px;
+                    }
+                }
+                .bar{
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+            .search{
+                display: flex;
+                margin: 10px 0 10px 0;
+                align-items: center;
+                gap: 10px;
+                @include responsive(sm){
+                    gap: 5px;
+                }
+                .icon{
+                    color: white;
+                    cursor: pointer;
+                }
+                input{
+                    border-radius: 8px;
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+        .section-route{
+            .link-wrap{
+                .route-wrap{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    padding: 6px 0;
+                    padding-left: 10px;
+                    transition: 0.2s all ease-in-out;
+                    cursor: pointer;
+                    @include responsive(sm){
+                        column-gap: 5px;
+                    }
+                    &.active{
+                        border-right: 4px solid white;
+                        background: rgba(255, 255, 255, 0.359);
+                    }
+                    .icon{
+                        color: white;
+                    }
+                    .link_text{
+                        color: white;
+                        white-space: nowrap;
+                        @include responsive(sm){
+                            font-size: 12px;
+                        }
+                    }
+                    &:hover{
+                        border-right: 4px solid white;
+                        background: rgba(255, 255, 255, 0.359);
+                    }
+                }
+            }
+        }
+    }
+}
